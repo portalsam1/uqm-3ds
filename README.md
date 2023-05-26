@@ -1,11 +1,17 @@
-# uqm-3ds
-
-# This shit don't work.
+# uqm-3ds ( This shit almost work? )
 
 An unsuccessful and broken attempt to port the Ur-Quan masters to the Nintendo 3DS.
 This shit just straight up doesn't work.
 
-The current source will actually compile it seems but will not link no matter what I try, somehow both SDL 1.2 and SDL 2 both have missing/undefined functions for the 3ds despite being directly compiled for the platform.
-As well as some ancient scrungly version of libvorbis I found online this is just not going well. Basically a digital cry for help at this point.
+Currently crashes on Citra half of the time complaining that "ConfigureNew3DSCPU" does not exist, hang indefinitely in other cases.
+( So close, so far. )
 
-Enter uqm-0.8.0 and run make, watch it probably fail due to include paths and even if it does work, watch it completely fail to link :)
+But now builds ( at least I suppose? )
+
+Make sure pkg-config is installed with DevKitPro and install required libaries.
+```
+pacman -S 3ds-zlib 3ds-sdl_ttf 3ds-sdl_mixer 3ds-sdl_image 3ds-sdl_gfx 3ds-sdl 3ds-mikmod 3ds-libvorbisidec 3ds-libpng 3ds-libogg
+```
+Navigate into uqm-0.8.0 and run Make and pray to jesus it works without changing the Makefile.
+
+Project configured for VSCode on Windows, change c_cpp_properties.json C:\ paths to /opt/ if you use linux like a normal person.
