@@ -4,10 +4,11 @@ An unsuccessful and broken attempt to port the Ur-Quan masters to the Nintendo 3
 This shit just straight up doesn't work.
 
 Currently crashes on Citra half of the time complaining that "ConfigureNew3DSCPU" does not exist, hang indefinitely in other cases.
-( So close, so far. )
+Also crashes on real hardware!
+![Crash Image](images/20230526_111819.jpg)
+Obviously I'm not experienced enough to debug this or know where to begin to start so consider this an epic cry for help.
 
 But now builds ( at least I suppose? )
-
 Make sure pkg-config is installed with DevKitPro and install required libaries.
 ```
 pacman -S 3ds-zlib 3ds-sdl_ttf 3ds-sdl_mixer 3ds-sdl_image 3ds-sdl_gfx 3ds-sdl 3ds-mikmod 3ds-libvorbisidec 3ds-libpng 3ds-libogg
