@@ -1,0 +1,75 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.22000.0",
+            "compilerPath": "cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64",
+            "configurationProvider": "ms-vscode.makefile-tools"
+        },
+        {
+            "name": "ARMv6K (3DS)",
+            "includePath": [
+                "${workspaceFolder}\\uqm-0.8.0\\src\\**",
+                "${workspaceFolder}\\uqm-0.8.0\\src\\libs\\graphics\\sdl\\",
+                "C:\\devkitPro\\sdl2\\include\\",
+                "C:\\devkitPro\\vorbis\\include\\",
+                "C:\\devkitPro\\portlibs\\3ds\\include\\"
+            ],
+            "defines": [
+                "__N3DS__",
+                "THREADLIB_SDL",
+                "HAVE_MEMORY_H",
+                "HAVE_CONFIG_H",
+                "HAVE_UNISTD_H",
+                "HAVE_GETOPT_LONG",
+                "HAVE__BOOL",
+                "HAVE_SETENV",
+                "HAVE_STRUP",
+                "HAVE_STRCASECMP_UQM",
+                "HAVE_GETOPT_LONG",
+                "HAVE_READDIR_R",
+                "HAVE_GETOPT_LONG",
+                "HAVE_ISWGRAPH",
+                "HAVE_WCHAR_T",
+                "HAVE_WINT_T"
+            ],
+            "windowsSdkVersion": "none",
+            "compilerPath": "C:\\devkitPro\\devkitARM\\bin\\arm-none-eabi-gcc.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "gcc-arm",
+            "compilerArgs": [
+                "-march=armv6k",
+                "-mtune=mpcore",
+                "-mfloat-abi=hard",
+                "-mtp=soft",
+                "-g",
+                "-Wall",
+                "-O2",
+                "-mword-relocations",
+                "-ffunction-sections",
+                "-D__3DS__",
+                "-fno-rtti",
+                "-fno-exceptions",
+                "-std=gnu++11"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/uqm-0.8.0/src/**"
+                ]
+            }
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "sdl_internal.h": "c",
+        "port.h": "c",
+        "config.h": "c"
+    }
+}
