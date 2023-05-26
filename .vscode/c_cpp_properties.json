@@ -21,10 +21,7 @@
             "name": "ARMv6K (3DS)",
             "includePath": [
                 "${workspaceFolder}\\uqm-0.8.0\\src\\**",
-                "${workspaceFolder}\\uqm-0.8.0\\src\\libs\\graphics\\sdl\\",
-                "C:\\devkitPro\\sdl2\\include\\",
-                "C:\\devkitPro\\vorbis\\include\\",
-                "C:\\devkitPro\\portlibs\\3ds\\include\\"
+                "C:\\devkitPro\\portlibs\\3ds\\include"
             ],
             "defines": [
                 "__N3DS__",
@@ -44,7 +41,7 @@
                 "HAVE_WCHAR_T",
                 "HAVE_WINT_T"
             ],
-            "windowsSdkVersion": "none",
+            "windowsSdkVersion": "0.0.0.0",
             "compilerPath": "C:\\devkitPro\\devkitARM\\bin\\arm-none-eabi-gcc.exe",
             "cStandard": "c11",
             "cppStandard": "c++11",

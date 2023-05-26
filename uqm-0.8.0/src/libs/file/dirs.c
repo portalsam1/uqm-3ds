@@ -22,6 +22,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
+#include <unistd.h>
+#include <dirent.h>
 #include "port.h"
 #include "config.h"
 #include "filintrn.h"
@@ -243,19 +245,28 @@ getHomeDir (void)
 #ifdef WIN32
 	return getenv ("HOME");
 #else
-	const char *home;
-	struct passwd *pw;
 
-	home = getenv ("HOME");
-	if (home != NULL)
-		return home;
+	#ifndef __N3DS__
+		const char *home;
+		struct passwd *pw;
 
-	pw = getpwuid (getuid ());
-	if (pw == NULL)
-		return NULL;
-	// NB: pw points to a static buffer.
+		home = getenv ("HOME");
+		if (home != NULL)
+			return home;
 
-	return pw->pw_dir;
+		pw = getpwuid(getuid());
+		if (pw == NULL)
+			return NULL;
+		// NB: pw points to a static buffer.
+
+		return pw->pw_dir;
+	#else
+
+		/* The linker seems to hate getHomeDir() getpwuid() and getuid(), the home dir should be the same anyway? Does this even work? */
+		return "/";
+
+	#endif
+
 #endif
 }
 

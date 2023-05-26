@@ -3,20 +3,25 @@
 #ifndef CONFIG_3DS_H_
 #define CONFIG_3DS_H_
 
+/* Don't actually know if SD card file paths work like this, taking a wild guess. */
+
 /* Directory where the UQM game data is located */
-#define CONTENTDIR "/3ds/uqm/content"
+#define CONTENTDIR "3ds/uqm/content"
 
 /* Directory where game data will be stored */
-#define USERDIR "/3ds/uqm/userdata"
+#define USERDIR "3ds/uqm/userdata"
 
 /* Directory where config files will be stored */
 #define CONFIGDIR USERDIR
 
 /* Directory where supermelee teams will be stored */
-#define MELEEDIR "/3ds/uqm/userdata/teams/"
+#define MELEEDIR "3ds/uqm/userdata/teams/"
 
 /* Directory where save games will be stored */
-#define SAVEDIR "/3ds/uqm/userdata/save/"
+#define SAVEDIR "3ds/uqm/userdata/save/"
+
+/* 3DS is a little bitch boy that doesnt have a direct libvorbis >:3 */
+#define OVCODEC_TREMOR
 
 /* Defined if words are stored with the most significant byte first */
 /* Spoiler alert they fucking aren't >:3 */

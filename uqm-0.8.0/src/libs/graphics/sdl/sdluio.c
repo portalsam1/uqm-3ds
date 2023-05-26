@@ -18,14 +18,13 @@
 
 #include "port.h"
 #include "libs/uio.h"
-#include SDL_INCLUDE(SDL.h)
-#include SDL_INCLUDE(SDL_error.h)
-#include SDL_INCLUDE(SDL_rwops.h)
+#include <SDL/SDL.h>
+#include <SDL/SDL_error.h>
+#include <SDL/SDL_rwops.h>
 #include "libs/memlib.h"
 #include "png2sdl.h"
 #include <errno.h>
 #include <string.h>
-
 
 static SDL_RWops *sdluio_makeRWops (uio_Stream *stream);
 

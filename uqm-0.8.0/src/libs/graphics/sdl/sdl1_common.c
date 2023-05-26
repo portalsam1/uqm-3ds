@@ -57,8 +57,9 @@ TFB_PreInit (void)
 	}
 #endif
 
-	if ((SDL_Init (SDL_INIT_VIDEO | SDL_INIT_NOPARACHUTE) == -1))
+	if ((SDL_Init (SDL_INIT_VIDEO | SDL_TOPSCR) == -1))
 	{
+		
 		log_add (log_Fatal, "Could not initialize SDL: %s.", SDL_GetError ());
 		exit (EXIT_FAILURE);
 	}

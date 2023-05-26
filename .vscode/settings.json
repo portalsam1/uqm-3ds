@@ -2,6 +2,10 @@
     "files.associations": {
         "sdl_internal.h": "c",
         "port.h": "c",
-        "config.h": "c"
+        "config.h": "c",
+        "alarm.h": "c",
+        "sdl.h": "c",
+        "pwd.h": "c",
+        "sdl_common.h": "c"
     }
 }
