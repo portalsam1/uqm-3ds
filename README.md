@@ -1,5 +1,7 @@
 # uqm-3ds
 
+# This shit don't work.
+
 An unsuccessful and broken attempt to port the Ur-Quan masters to the Nintendo 3DS.
 This shit just straight up doesn't work.
 
