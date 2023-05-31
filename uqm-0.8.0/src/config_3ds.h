@@ -4,21 +4,22 @@
 #define CONFIG_3DS_H_
 
 /* Don't actually know if SD card file paths work like this, taking a wild guess. */
+/* Update: They don't!, I noticed a stay 3ds/uqm in my 3ds folder, an extra 3ds, meaning the root isnt the sd root and filesystem does work? */
 
 /* Directory where the UQM game data is located */
-#define CONTENTDIR "3ds/uqm/content"
+#define CONTENTDIR "uqm/content"
 
 /* Directory where game data will be stored */
-#define USERDIR "3ds/uqm/userdata"
+#define USERDIR "uqm/userdata"
 
 /* Directory where config files will be stored */
 #define CONFIGDIR USERDIR
 
 /* Directory where supermelee teams will be stored */
-#define MELEEDIR "3ds/uqm/userdata/teams/"
+#define MELEEDIR "uqm/userdata/teams/"
 
 /* Directory where save games will be stored */
-#define SAVEDIR "3ds/uqm/userdata/save/"
+#define SAVEDIR "uqm/userdata/save/"
 
 /* 3DS is a little bitch boy that doesnt have a direct libvorbis >:3 */
 #define OVCODEC_TREMOR
